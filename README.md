@@ -19,5 +19,5 @@ example_applications/
 │   ├── v1.0/             # Tutorials for QuScope v1.0
 │   ├── v1.1/             # Tutorials for newer features
 ├── datasets/             # Supporting datasets or synthetic examples
-├── requirements.txt      # Install necessary packages
+├── LICENSE.txt           # MIT License
 └── README.md
