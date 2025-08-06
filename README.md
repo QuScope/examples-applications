@@ -6,18 +6,22 @@ This repository contains interactive notebooks, reproducible demos, and educatio
 
 Image Analysis:
 - Encoding, Decoding, Filters & Denoising
+
 EELS Analysis:
 - Quantum Richardson-Lucy Deconvolution (QRLD)
 - Quantum Kramers-Kronig Transformation (QKKT)
 - Low-Loss Analysis
 - Core-Loss Analysis
+
 Electron Diffraction:
 - Phase Analysis
 - Space Group Analysis
 - Convergent Beam Electron Diffraction (CBED)
+
 Simulations:
 - Quantum-Enhanced Weak Phase Object Approximation
 - Quantum-Enhanced Multislice Algorithm
+
 General:
 - Quantum encoding and transformations
 
