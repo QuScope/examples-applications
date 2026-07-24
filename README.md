@@ -5,7 +5,7 @@
 This repository contains interactive notebooks, reproducible demos, and educational materials designed to showcase how to use QuScope for a range of quantum-enhanced tasks, including:
 
 Image Analysis:
-- Encoding, Decoding, Filters & Denoising
+- Encoding, Decoding, Filters & Denoising - *coming soon*
 
 EELS Analysis:
 - Quantum Richardson-Lucy Deconvolution (QRLD) - *coming soon*
