@@ -20,19 +20,22 @@ Electron Diffraction:
 
 Simulations:
 - Quantum-Enhanced Weak Phase Object Approximation
-- Quantum-Enhanced Multislice Algorithm - *coming soon*
+- Quantum-Enhanced Multislice Algorithm
+- Quantum CTEM & STEM simulations
 
 General:
 - Quantum encoding and transformations
+- Unified backend abstraction (simulator & IBM Quantum hardware)
+- Material workflows (MoS2, Graphene, and more)
 
 ---
 
 ## Installation
 
-To use these examples, first install QuScope:
+To use these examples, install QuScope v0.2.0:
 
 ```bash
-pip install quscope
+pip install quscope==0.2.0
 ```
 
 ---
@@ -40,12 +43,21 @@ pip install quscope
 ## 📁 Repository Structure
 
 ```bash
-example_applications/
-├── notebooks/                          # Jupyter notebooks organized by version
-│   ├── v1.0/                           # Tutorials for QuScope v1.0
-│   ├── images_01_denoising.ipynb       # Tutorial for denoising images
-│   ├── simulations_01_ctem.ipynb       # Tutorial for simulating CTEM images
-│   ├── Quantum_ctem_paper_full_example.ipynb  # Full CTEM paper example
-├── datasets/                           # Supporting datasets or synthetic examples
+examples-applications/
+├── notebooks_v0.2.0/                   # Tutorials for QuScope v0.2.0
+│   ├── 01_getting_started.ipynb        # Backends, materials, quantum encoding
+│   ├── 02_quantum_ctem_advanced.ipynb  # Advanced CTEM simulation
+│   ├── 03_material_workflows.ipynb     # Material loading and parameter access
+│   ├── 05_fully_quantum_ctem.ipynb     # Fully quantum CTEM pipeline
+│   ├── 06_quantum_ctf_envelope.ipynb   # Quantum CTF envelope functions
+│   ├── 07_si3n4_quantum_multislice.ipynb # Si3N4 quantum multislice
+│   ├── 10_quantum_ctem.ipynb           # Quantum CTEM end-to-end
+│   ├── 11_quantum_stem.ipynb           # Quantum STEM simulation
+│   └── legacy/                         # Legacy notebooks (pre-v0.2.0)
+├── notebooks/                          # Earlier tutorial notebooks
+│   ├── images_01_denoising.ipynb       # Image denoising tutorial
+│   ├── simulations_01_ctem.ipynb       # CTEM simulation tutorial
+│   └── Quantum_ctem_paper_full_example.ipynb
+├── datasets/                           # Supporting datasets
 ├── LICENSE.txt                         # MIT License
 └── README.md
