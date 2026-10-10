@@ -19,7 +19,7 @@ Each folder has its own README with the notebook list, the QuScope version each 
 ```
 examples-applications/
 ├── v0.3/    planned examples, 00_template.ipynb
-├── v0.2/    notebooks 01-13, figures/ (reference outputs)
+├── v0.2/    8 notebooks (01-10, 12, 13), figures/ (reference outputs)
 ├── v0.1/    notebooks, legacy/, datasets/
 ├── LICENSE.txt
 └── README.md

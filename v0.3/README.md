@@ -2,20 +2,28 @@
 
 QuScope 0.3 is not released and its scope is not final. This folder collects what the examples will cover and how a notebook should be written, so new examples can land as the features stabilise.
 
+## Scope
+
+**CBED first.** Convergent-beam electron diffraction is the first new technique, built on the multislice circuits that already exist in v0.2. SAED, nanobeam diffraction, Kikuchi and EBSD are not planned.
+
+**Thermal vibrations through the whole stack.** Frozen-phonon configurations and thermal diffuse scattering (TDS) become an option wherever the simulation is multislice, to get closer to real specimens (compare abTEM's `FrozenPhonons`): CTEM, STEM (HAADF and ADF are dominated by TDS), and CBED. The module `quantum_frozen_phonon` is experimental in 0.2 and is the starting point.
+
+**Not in v0.3.** The Bloch-wave eigensolver (`quantum_bloch_wave`, QPE) moves to the next version: it is about the fundamental physics of scattering rather than image simulation.
+
 ## Planned examples
 
-From the QuScope roadmap: the modules below are experimental in 0.2 (APIs may change) and are the candidates to join the stable release.
-
-| area | QuScope module | starting point |
+| example | what it shows | reference |
 |---|---|---|
-| diffraction: SAED, CBED, nBD, Kikuchi, EBSD | `quantum_diffraction` | QuScope `docs/notebooks/12_quantum_diffraction.ipynb` |
-| frozen phonon, thermal diffuse scattering | `quantum_frozen_phonon` | `13_bloch_wave_and_frozen_phonon.ipynb` |
-| Bloch-wave QPE eigensolver | `quantum_bloch_wave` | `13_bloch_wave_and_frozen_phonon.ipynb` |
-| advanced fully quantum TEM, multislice circuit | `quantum_multislice_circuit` | `08_fully_quantum_tem_advanced.ipynb`, `09_quantum_multislice_circuit_test.ipynb` |
+| CBED of SrTiO3 [001] | CBED pattern from the quantum multislice, thickness series | abTEM `PixelatedDetector` |
+| frozen-phonon STEM of SrTiO3 | HAADF and ADF with thermal vibrations, convergence with the number of configurations | abTEM `FrozenPhonons` |
+| CBED with TDS | diffuse background of the CBED pattern from frozen-phonon averaging | abTEM |
+| thermal vibrations in CTEM | frozen-phonon CTEM image | abTEM |
 
-Natural follow-ups from v0.2: thermal vibrations in the SrTiO3 STEM images (notebook 13 has none, so absolute HAADF levels are idealised), and larger cells, which need more qubits.
+QuScope notebooks to start from: `08_fully_quantum_tem_advanced`, `09_quantum_multislice_circuit_test`, `12_quantum_diffraction`, `13_bloch_wave_and_frozen_phonon` (in `docs/notebooks` of the QuScope repo; the frozen-phonon part only).
 
-Still undecided: image analysis (encoding, filters, denoising) and EELS analysis (QRLD, QKKT, low-loss and core-loss), listed as "coming soon" in the old README.
+Notebook 13 in [`../v0.2`](../v0.2) has no thermal scattering, so its absolute HAADF and ADF levels are idealised; the second example above is its direct follow-up.
+
+Image analysis (encoding, filters, denoising) and EELS analysis (QRLD, QKKT, low-loss, core-loss) were listed as "coming soon" in the old README and are not scheduled.
 
 ## Writing a notebook
 
