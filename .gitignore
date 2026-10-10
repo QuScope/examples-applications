@@ -1,0 +1,6 @@
+.DS_Store
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+# figures written next to the notebooks when they are re-run (reference copies live in v0.2/figures/)
+v0.*/*.png
