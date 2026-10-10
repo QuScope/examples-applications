@@ -25,7 +25,9 @@ Notebooks 12 and 13 need the 0.2.1 fixes (not on PyPI yet) and [abTEM](https://a
 pip install git+https://github.com/QuScope/QuScope.git abtem
 ```
 
-QuScope declares `qiskit>=2`, abTEM still needs NumPy 1.x. If pip reports a conflict, install QuScope with `--no-deps` into an environment that already has `qiskit`, `abtem` and `numpy<2`.
+QuScope's dependencies (`qiskit>=2`) and abTEM install together: pip resolves them to Qiskit 2.5, NumPy 2.5 and abTEM 1.0.10, and QuScope's test suite passes in that environment. (An earlier version of this README said abTEM needs NumPy 1.x; that was wrong.)
+
+Notebooks 02 and 07 import `quscope.ctem.KirklandPotential`, QuScope's own potential table. That class was removed after 0.2.1 in favour of `AtomicPotential`, which takes potentials from abTEM ([QuScope PR #32](https://github.com/QuScope/QuScope/pull/32)); the old potentials were 1.2 to 1.9 times larger than abTEM's. Their stored outputs come from the old potentials, so run them on QuScope 0.2.x as written, or switch the import to `AtomicPotential` (and expect different numbers).
 
 ## Notes
 
